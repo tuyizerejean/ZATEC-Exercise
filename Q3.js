@@ -4,15 +4,16 @@ const francIndex = countries.indexOf(searchTerm);
 console.log("Index of France element is:",francIndex)
 const deleteIndex=countries.splice(1,francIndex)
 console.log("Elements of the array after removing France:" ,countries)
-//-------Failed to work on this sub question----------
+// Working on the array to accept countries that start with 'E'
+console.log("---Working on the array to accept countries that start with 'E'-----")
 let eCountries = []
-// for(i=0;i< eCountries.length;i++)
-// {
-//     const addItem='England';
-// if(addItem.toString().StartWith('E'))
-// {
-//     eCountries.unshift(addItem);
-// }
-// console.log(eCountries[i])
-// }
+countries.forEach((item) => {
+  	if(item.startsWith('E')){
+      eCountries.push(item)
+    }
+})
+eCountries.forEach((item, index) => {
+  	console.log(`Index[${index}]: ${item} `)
+})
+
 
